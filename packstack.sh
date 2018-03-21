@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Veuillez saisir l'adresse Ip du Proxy"
-read $proxy
+read proxy
 echo "Veuillez saisir le port du Proxy"
-read $port
+read port
 PROXY_URL='$proxy'
 PROXY_PORT='$port'
 
