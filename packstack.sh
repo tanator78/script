@@ -1,11 +1,7 @@
 #!/bin/bash
 
-echo "Veuillez saisir l'adresse Ip du Proxy"
-read proxy
-echo "Veuillez saisir le port du Proxy"
-read port
-PROXY_URL='$proxy'
-PROXY_PORT='$port'
+read "Veuillez saisir l'adresse Ip du Proxy: " PROXY_URL
+read "Veuillez saisir le port du Proxy: " PROXY_PORT
 
 echo "proxy=http://$PROXY_URL:$PROXY_PORT" >> /etc/yum.conf
 export http_proxy=http://$PROXY_URL:$PROXY_PORT
