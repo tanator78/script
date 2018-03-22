@@ -20,7 +20,7 @@ systemctl disable NetworkManager
 
 yum install python-pip
 packstack --gen-answer-file=~/answer.cfg
-while [ $compteur != "1" ]
+while [ $compteur != `expr $compteur + 1` ]
 do
 read -p "Voulez-vous procéder a une installation par défaut ? Y/N " reponse
   if [ $reponse = "Y" ]
