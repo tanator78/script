@@ -18,7 +18,7 @@ systemctl stop NetworkManager
 systemctl disable NetworkManager
 
 yum install python-pip
-packtack --gen-answer-file=~/answer.cfg
+packstack --gen-answer-file=~/answer.cfg
 read -p "Voulez-vous procéder a une installation par défaut ? Y/N " reponse
 if [ $reponse = Y]
 then answer.cfg
