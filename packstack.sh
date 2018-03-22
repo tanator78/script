@@ -17,4 +17,9 @@ yum -y install openstack-packstack
 systemctl stop NetworkManager
 systemctl disable NetworkManager
 
-#packstack --answer-file= <EOF a completer .....
+yum install python-pip
+packtack --gen-answer-file=~/answer.cfg
+read "Voulez-vous procéder a une installation par défaut ? Y/N " reponse
+if [ $reponse = Y]
+then answer.cfg
+fi
