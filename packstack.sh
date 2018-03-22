@@ -25,10 +25,10 @@ do
 read -p "Voulez-vous procéder a une installation par défaut ? Y/N " reponse
   if [ $reponse = "Y" ]
     then packstack --answer-file=answer.cfg
-         $compteur = `expr $compteur + 1`
+         let "compteur+=1"
   elif [ $reponse = "N" ]
     then echo "Veulliez modifier le fichier answer.cfg puis lancer la commande: packstack --answer-file=answer.cfg"
-         $compteur = `expr $compteur + 1`
+         let "compteur+=1"
   else 
      echo "Réponse incorrecte veuillez réessayer!"
   fi
