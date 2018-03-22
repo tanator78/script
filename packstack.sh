@@ -19,14 +19,14 @@ systemctl disable NetworkManager
 
 yum install python-pip
 packstack --gen-answer-file=~/answer.cfg
-while [ i != 1]
+while [ i != "1" ]
 do
 read -p "Voulez-vous procéder a une installation par défaut ? Y/N " reponse
-  if [ $reponse = Y]
+  if [ $reponse = "Y" ]
     then packstack --answer-file=answer.cfg
          i = 1 
-  elif [ $reponse = N]
-    then echo "Veulliez modifier le fichier answer.cfg puis lancr la commande: packstack --answer-file=answer.cfg"
+  elif [ $reponse = "N" ]
+    then echo "Veulliez modifier le fichier answer.cfg puis lancer la commande: packstack --answer-file=answer.cfg"
          i = 1
   else 
      echo "Réponse incorrecte veuillez réessayer!"
